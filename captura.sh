@@ -9,7 +9,7 @@ echot(){
 clear	
 echo "-----------------------------------------------------------"
 echo ""
-echo "   SISTEMA DE CAPTURA DE TELA COM ENVIO DE EMAIL"
+echo "   SISTEMA DE CAPTURA DE TELA COM ENVIO DE EMAIL     "
 echo ""
 echo "   $1"
 echo ""
