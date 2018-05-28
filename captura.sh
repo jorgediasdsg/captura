@@ -4,18 +4,19 @@
 e(){ echo $1; }; p(){ clear; seq 7 8 180 | paste -sd \X
 e ""; e " SISTEMA CAPTURA DE TELA E ENVIO DE EMAIL"; e ""; e "	$1"; e ""; seq 7 8 180 | paste -sd \X; }
 #INSTALA CLIENTE DE E-MAIL
-d=$(date +%d-%m-%Y-%X); DIR=$HOME/git/captura
-[ ! -d "$HOME/.muttrc" ] || ./mail.sh; [ ! -d "$HOME/TRADE" ] || mkdir $HOME/TRADE
+d=$(date +%d-%m-%Y-%X)
 s=sites.txt
 m=emails.txt
+DIR=$HOME/git/captura
 #LENDO ARQUIVOS DOS SITES
 captura(){
 	#p "LENDO ARQUIVOS DE SITES"
 	grep -v "^#" $s > site
 	while read NOME LINK; do
+		d=$(date +%d-%m-%Y-%X)
 		#p "ACESSANDO O SITE $LINK"
 		google-chrome-stable $LINK
-		e "$NOME - $LINK" >> relatorio.txt
+		e "$NOME - $d - $LINK" >> relatorio.txt
 		#p "AGUARDANDO CAPTURA DE TELA"
 		sleep 4
 		#p "CAPTURANDO TELA"
