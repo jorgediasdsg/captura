@@ -5,5 +5,5 @@ r(){ grep -v "^#" $s > g; while read n k; do d=$(date +%d-%m-%Y-%X); $w $k; e "$
 t(){ e "-----------------------------------------------" > $l/c; e "RELATORIO DE SITES ACESSADOS" >> $l/c; e "" >> $l/c; cat r >> $l/c; e "" >> $l/c; e "PARTICIPANTES" >> $l/c; e "" >> $l/c; e $m >> $l/c; e "" >> $l/c; e "ATT NELSON BORCHARDT" >> $l/c; e "-----------------------------------------------" >> $l/c; }
 u(){ zip $l/$d.zip $l/*.png; rm $l/*.png; }
 j(){ grep -v "^#" $m > y; while read z n WHATS; do mutt -s "$n - SEU RELATORIO TRADE DE $d" $z < c -a $l/*.zip; done < y; }
-v(){ rm -rf $l/*.zip $l/c $l/y  $l/r $l/g; p "SESSAO ENCERRADA, PODE VOLTAR A TOMAR CAFÉ"; $w; }
+v(){ rm -rf $l/*.zip $l/c $l/y  $l/r $l/g; p "SESSAO ENCERRADA, PODE VOLTAR A TOMAR CAFÉ"; $w https://github.com/jorgediasdsg/captura; }
 r; t; u; j; v; exit 
