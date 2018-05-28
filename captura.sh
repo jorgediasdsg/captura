@@ -1,54 +1,56 @@
-#!/bin/bash
+#!/bin/bash -exu
+#AUTOR JORGE DIAS jorgediasdsg@gmail.com https://github.com/jorgedsdsg/captura
+#PAINEL DE EXIBIÇÃO 
+e(){ echo $1; }; p(){ clear; seq 7 8 180 | paste -sd \X
+e ""; e " SISTEMA CAPTURA DE TELA E ENVIO DE EMAIL"; e ""; e "	$1"; e ""; seq 7 8 180 | paste -sd \X; }
 #INSTALA CLIENTE DE E-MAIL
-./mail.sh | tee log.txt
-SITE=uol.com.br
-DIA=$(date +%d-%m-%Y-%X)
-DESTINO=meuemail@mmm.com
-DIR=$HOME/git
-echot(){
-clear	
-echo "-----------------------------------------------------------"
-echo ""
-echo "   SISTEMA DE CAPTURA DE TELA COM ENVIO DE EMAIL   "
-echo ""
-echo "   $1"
-echo ""
-if [ -n "$2" ]; then
-echo "   $2"
-echo ""
-fi
-if [ -n "$3" ]; then
-echo "   $3"
-echo ""
-fi
-if [ -n "$4" ]; then
-echo "   $4"
-echo ""
-fi
-echo "-----------------------------------------------------------"
+d=$(date +%d-%m-%Y-%X); DIR=$HOME/git/captura
+[ ! -d "$HOME/.muttrc" ] || ./mail.sh; [ ! -d "$HOME/TRADE" ] || mkdir $HOME/TRADE
+s=sites.txt
+m=emails.txt
+#LENDO ARQUIVOS DOS SITES
+captura(){
+	#p "LENDO ARQUIVOS DE SITES"
+	grep -v "^#" $s > site
+	while read NOME LINK; do
+		#p "ACESSANDO O SITE $LINK"
+		google-chrome-stable $LINK
+		e "$NOME - $LINK" >> relatorio.txt
+		#p "AGUARDANDO CAPTURA DE TELA"
+		sleep 4
+		#p "CAPTURANDO TELA"
+		gnome-screenshot -f $DIR/$NOME-$d.png
+	done < site
 }
-echo "--------------------" > $DIR/email.txt
-echo "RELATORIO DE SITES ACESSADOS" >> $DIR/email.txt
-echo "" >> $DIR/email.txt
-echo "$SITE FOI FEITA A CAPTURA" >> $DIR/email.txt
-echo "" >> $DIR/email.txt
-echo "" >> $DIR/email.txt
-echo "ATT FULANO DE TALS" >> $DIR/email.txt
-echo "--------------------" >> $DIR/email.txt
-echot "ACESSANDO O SITE $SITE"
-google-chrome-stable http://$SITE
-echot "AGUARDANDO CAPTURA DE TELA"
-sleep 4
-echot "CAPTURANDO TELA"
-gnome-screenshot -f $DIR/$SITE-$DIA.png
-echot "ZIPANDO CAPTURAS"
-zip $DIR/$DIA.zip $DIR/*.png
-echot "REMOVENDO CAPTURAS"
-rm $DIR/*.png
-echot "ENVIANDO EMAIL"
-mutt -s "RELATORIO DO SITE $SITE" $DESTINO < email.txt -a $DIR/*.zip
-echot "REMOVENDO ANEXO"
-rm -rf $DIR/*.zip $DIR/email.txt
-echot "FECHANDO CHROME"
-#killall chrome
-echot "SESSAO ENCERRADA, PODE VOLTAR A TOMAR CAFÉ"
+cria_email(){
+	e "-----------------------------------------------" > $DIR/cmail
+	e "RELATORIO DE SITES ACESSADOS" >> $DIR/cmail
+	e "" >> $DIR/cmail
+	cat relatorio.txt >> $DIR/cmail
+	e "" >> $DIR/cmail
+	e "$LINK FOI FEITA A CAPTURA" >> $DIR/cmail
+	e "" >> $DIR/cmail
+	e "ATT NELSON BORCHARDT" >> $DIR/cmail
+	e "-----------------------------------------------" >> $DIR/cmail
+}
+gera_anexo(){
+	p "ZIPANDO CAPTURAS"
+	zip $DIR/$d.zip $DIR/*.png
+	p "REMOVENDO CAPTURAS"
+	rm $DIR/*.png
+}
+envia_email(){
+	grep -v "^#" $m > email
+	while read EMAIL NOME WHATS; do
+		p "ENVIANDO EMAIL PARA $NOME"
+		mutt -s "$NOME - SEU RELATORIO TRADE DE $d" $EMAIL < cmail -a $DIR/*.zip
+	done < email
+}
+remove_temp(){
+	p "REMOVENDO ANEXO"
+	rm -rf $DIR/*.zip $DIR/email.txt $DIR/cmail $DIR/email $DIR/relatorio.txt $DIR/site
+	p "FECHANDO CHROME"
+	#killall chrome
+	p "SESSAO ENCERRADA, PODE VOLTAR A TOMAR CAFÉ"
+}
+captura; cria_email; gera_anexo; envia_email; remove_temp
