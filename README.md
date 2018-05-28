@@ -16,7 +16,7 @@
 
 <a href="https://github.com/jorgediasdsg/captura.git">CAPTURA DE TELA</a>
 
-<p>Cria a pasta /home/user/TRADE</p>
+<p>Cria a pasta £HOME/TRADE</p>
 
 <p>Instala os arquivos .sh</p>
 
