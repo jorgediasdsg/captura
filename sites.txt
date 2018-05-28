@@ -1,0 +1,4 @@
+#NOME DO SITE - LINK DO SITE
+EURUSD https://br.tradingview.com/symbols/EURUSD/
+USDBRL https://br.tradingview.com/symbols/USDBRL/
+BTCUSD https://br.tradingview.com/symbols/BTCUSD/
