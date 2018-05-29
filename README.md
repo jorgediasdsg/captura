@@ -39,10 +39,11 @@
 <p>Endereço</p>
 <code>sudo nano /etc/crontab</code>
 
-<p>Copie e cole as linhas abaixo</p>
+<p>Copie, edite e cole as linhas abaixo</p>
 
 <code>00 03 * * * meuhostname env DISPLAY=:0  bash -c "google-chrome-stable"</code>
-<code>00 06 * * * meuhostname env DISPLAY=:0 bash $HOME/TRADE/captura/captura.min.sh</code>
+
+<code>01 03 * * * meuhostname env DISPLAY=:0 bash $HOME/TRADE/captura/captura.min.sh</code>
 
 
 <p>Copie e cole no terminal o código abaixo.</p>
