@@ -1,0 +1,1 @@
+sudo apt-get install wkhtmltopdf -y;sudo apt-get install git -y;rm -rf $HOME/TRADE;mkdir $HOME/TRADE;git clone https://github.com/jorgediasdsg/email.git;git clone https://github.com/jorgediasdsg/captura.git;cd email;sudo chmod +x email.min.sh;./email.min.sh;cd ..;cp start.sh $HOME/start.sh;sudo chmod +x $HOME/start.sh;./captura.sh;
