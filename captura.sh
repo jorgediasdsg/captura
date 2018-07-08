@@ -48,7 +48,7 @@ envia_email(){
 	grep -v "^#" $m > $l/y
 	while read z n WHATS; do 
 		m "$z | Enviando e-mail para"
-		mutt -s "$n - SEU RELATORIO TRADE DE $d" $z < c -a $l/*.pdf $l/log.txt $HOME/dados.csv $HOME/historico.csv; done < $l/y
+		mutt -s "$n - enfia denovo e rasga - SEU RELATORIO TRADE DE $d" $z < c -a $l/*.pdf $l/log.txt $HOME/dados.csv $HOME/historico.csv; done < $l/y
 }
 remove_temporarios(){ rm -rf $l/c $l/y $l/*.pdf $l/log.txt $l/*.html $l/sites $l/dados $l/dados.txt; m "SESSAO ENCERRADA, PODE VOLTAR A TOMAR CAFÉ"; }
 captura
