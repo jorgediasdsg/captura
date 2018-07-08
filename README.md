@@ -48,4 +48,4 @@
 
 <p>Copie e cole no terminal o código abaixo.</p>
 
-<code>rm -rf $HOME/TRADE; mkdir $HOME/TRADE; cd $HOME/TRADE; git clone https://github.com/jorgediasdsg/email.git; git clone https://github.com/jorgediasdsg/captura.git; cd email; sudo chmod +x email.min.sh; ./email.min.sh; cd ..; cd captura; sudo chmod +x captura.min.sh; ./captura.min.sh;</code>
+<code>sudo apt-get install wkhtmltopdf -y;sudo apt-get install git -y;rm -rf $HOME/TRADE;mkdir $HOME/TRADE; cd $HOME/TRADE; git clone https://github.com/jorgediasdsg/email.git;git clone https://github.com/jorgediasdsg/captura.git;cd email;sudo chmod +x email.min.sh;./email.min.sh;cd ..;cd captura; cp start.sh $HOME/start.sh;sudo chmod +x $HOME/start.sh;/bin/bash ./start.sh;</code>
