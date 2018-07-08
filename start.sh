@@ -5,6 +5,7 @@ cd $HOME/TRADE;
 git clone https://github.com/jorgediasdsg/captura.git;
 cd captura;
 sudo chmod +x captura.sh;
+sudo chmod +x start.sh;
 ./captura.sh;
 
 #CRIANDO A CRON
