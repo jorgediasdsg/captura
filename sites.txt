@@ -1,4 +1,12 @@
 #NOME DO SITE - LINK DO SITE
-EURUSD https://br.tradingview.com/symbols/EURUSD/
-USDBRL https://br.tradingview.com/symbols/USDBRL/
-BTCUSD https://br.tradingview.com/symbols/BTCUSD/
+EURCAD https://br.investing.com/currencies/eur-cad-historical-data
+EURAUD https://br.investing.com/currencies/eur-aud-historical-data
+EURGBP https://br.investing.com/currencies/eur-gbp-historical-data
+EURUSD https://br.investing.com/currencies/eur-usd-historical-data
+GBPCAD https://br.investing.com/currencies/gbp-cad-historical-data
+GBPJPY https://br.investing.com/currencies/gbp-jpy-historical-data
+GBPUSD https://br.investing.com/currencies/gbp-usd-historical-data
+USDCAD https://br.investing.com/currencies/usd-cad-historical-data
+USDJPY https://br.investing.com/currencies/usd-jpy-historical-data
+USDAUD https://br.investing.com/currencies/usd-aud-historical-data
+
