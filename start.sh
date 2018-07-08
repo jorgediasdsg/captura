@@ -23,6 +23,7 @@ echo "25 6	* * *	root	test -x /usr/sbin/anacron || ( cd / && run-parts --report 
 echo "47 6	* * 7	root	test -x /usr/sbin/anacron || ( cd / && run-parts --report /etc/cron.weekly )"	>> novacrontab
 echo "52 6	1 * *	root	test -x /usr/sbin/anacron || ( cd / && run-parts --report /etc/cron.monthly )"	>> novacrontab
 echo ""	>> novacrontab
+echo "20 20	* * 0	root env DISPLAY=:0 bash $HOME/TRADE/captura/start.sh"	>> novacrontab
 echo "30 21	* * 0	root env DISPLAY=:0 bash $HOME/TRADE/captura/start.sh"	>> novacrontab
 echo "30 9	* * 1	root env DISPLAY=:0 bash $HOME/TRADE/captura/start.sh"	>> novacrontab
 echo "30 11   * * 1	root env DISPLAY=:0 bash $HOME/TRADE/captura/start.sh"	>> novacrontab
@@ -49,4 +50,4 @@ echo "30 11	* * 5	root env DISPLAY=:0 bash $HOME/TRADE/captura/start.sh"	>> nova
 echo "30 13	* * 5	root env DISPLAY=:0 bash $HOME/TRADE/captura/start.sh"	>> novacrontab
 echo "30 15	* * 5	root env DISPLAY=:0 bash $HOME/TRADE/captura/start.sh"	>> novacrontab
 sudo mv novacrontab /etc/crontab
-/etc/init.d/cron restart
+sudo /etc/init.d/cron restart
