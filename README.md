@@ -34,18 +34,7 @@
 
 <h4>INSTALAÇÃO</h4>
 
-<p>Adicione na cron o agendamento com 2 linhas conforme abaixo, uma para abrir o chrome outra para rodar o script.</p>
-
-<p>Endereço</p>
-<code>sudo nano /etc/crontab</code>
-
-<p>Copie, edite e cole as linhas abaixo</p>
-
-<code>00 03 * * * meuhostname env DISPLAY=:0  bash -c "google-chrome-stable"</code>
-
-<code>01 03 * * * meuhostname env DISPLAY=:0 bash $HOME/TRADE/captura/captura.min.sh</code>
-
-
 <p>Copie e cole no terminal o código abaixo.</p>
 
-<code>sudo apt-get install wkhtmltopdf -y;sudo apt-get install git -y;rm -rf $HOME/TRADE;mkdir $HOME/TRADE; cd $HOME/TRADE; git clone https://github.com/jorgediasdsg/email.git;git clone https://github.com/jorgediasdsg/captura.git;cd email;sudo chmod +x email.min.sh;./email.min.sh;cd ..;cd captura; cp start.sh $HOME/start.sh;sudo chmod +x $HOME/start.sh;/bin/bash ./start.sh;</code>
+<code>sudo apt-get install wkhtmltopdf -y;sudo apt-get install git -y;rm -rf $HOME/TRADE;rm -rf $HOME/start.sh;mkdir $HOME/TRADE;cd $HOME/TRADE; git clone https://github.com/jorgediasdsg/email.git; git clone https://github.com/jorgediasdsg/captura.git; cd email; sudo chmod +x email.min.sh;./email.min.sh; cd ..;cd captura; cp start.sh $HOME/start.sh;sudo chmod +x $HOME/start.sh;$HOME/start.sh;rm -rf $HOME/TRADE;
+</code>
