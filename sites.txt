@@ -9,4 +9,3 @@ EURGBP https://br.investing.com/currencies/eur-gbp-historical-data
 #USDCAD https://br.investing.com/currencies/usd-cad-historical-data
 #USDJPY https://br.investing.com/currencies/usd-jpy-historical-data
 #USDAUD https://br.investing.com/currencies/usd-aud-historical-data
-
