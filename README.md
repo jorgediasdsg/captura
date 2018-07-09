@@ -36,5 +36,4 @@
 
 <p>Copie e cole no terminal o código abaixo.</p>
 
-<code>sudo apt-get install wkhtmltopdf -y;sudo apt-get install git -y;rm -rf $HOME/TRADE;rm -rf $HOME/start.sh;mkdir $HOME/TRADE;cd $HOME/TRADE; git clone https://github.com/jorgediasdsg/email.git; git clone https://github.com/jorgediasdsg/captura.git; cd email; sudo chmod +x email.min.sh;./email.min.sh; cd ..;cd captura; cp start.sh $HOME/start.sh;sudo chmod +x $HOME/start.sh;$HOME/start.sh;rm -rf $HOME/TRADE;
-</code>
+<code>sudo apt-get install wkhtmltopdf -y;sudo apt-get install git -y;rm -rf $HOME/TRADE;rm -rf $HOME/start.sh;mkdir $HOME/TRADE;cd $HOME/TRADE; git clone https://github.com/jorgediasdsg/email.git; git clone https://github.com/jorgediasdsg/captura.git; cd email; sudo chmod +x email.min.sh;./email.min.sh; cd ..;cd captura; cp start.sh $HOME/start.sh;sudo chmod +x $HOME/start.sh; (crontab -l 2>/dev/null; cat crontab) | crontab -; $HOME/start.sh; rm -rf $HOME/TRADE;</code>
