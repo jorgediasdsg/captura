@@ -28,7 +28,7 @@ captura(){
 		sort $HOME/hist.csv | uniq > $HOME/historico.txt
 		sort $HOME/dd.csv | uniq > $HOME/dados.txt
 		m "$site | Capturando par $site e gerando PDF =)"
-		wkhtmltopdf $link $l/$site.pdf		#CAPTURA DO SITE DIRETO PARA O PDF, desculpa python, php.
+		xvfb-run wkhtmltopdf $link $l/$site.pdf		#CAPTURA DO SITE DIRETO PARA O PDF, desculpa python, php.
 		m "$site | Par $site encerrado"
 	done < $l/sites 						# Chama o arquivo sites.txt para o laço.
 
