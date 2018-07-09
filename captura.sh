@@ -38,7 +38,7 @@ cria_email(){ 							#Modelo de e-mail que será enviado
 	e "-----------------------------" > $l/c
 	e "RELATORIO DE SITES ACESSADOS" >> $l/c
 	e "" >> $l/c
-	e "PAR----VALOR--VARIAÇÃO---%-----------DATA---------LINK--------->" >> $l/c
+	e "PAR----VALOR--VARIAÇÃO---%-----------DATA------>" >> $l/c
 	e "" >> $l/c
 	cat dados.txt >> $l/c
 	e "" >> $l/c
