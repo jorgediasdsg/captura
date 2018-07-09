@@ -1,8 +1,8 @@
 26 22	* * 0	root env DISPLAY=:0 bash $HOME/start.sh
 30 21	* * 0	root env DISPLAY=:0 bash $HOME/start.sh
 30 9	* * 1	root env DISPLAY=:0 bash $HOME/start.sh
-30 11 * * 1	root env DISPLAY=:0 bash $HOME/start.sh
-30 13 * * 1	root env DISPLAY=:0 bash $HOME/start.sh
+30 11   * * 1	root env DISPLAY=:0 bash $HOME/start.sh
+30 13   * * 1	root env DISPLAY=:0 bash $HOME/start.sh
 30 15	* * 1	root env DISPLAY=:0 bash $HOME/start.sh
 30 21	* * 1	root env DISPLAY=:0 bash $HOME/start.sh
 30 9	* * 2	root env DISPLAY=:0 bash $HOME/start.sh
