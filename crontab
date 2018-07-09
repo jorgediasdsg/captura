@@ -13,7 +13,7 @@ PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin
 47 6	* * 7	root	test -x /usr/sbin/anacron || ( cd / && run-parts --report /etc/cron.weekly )
 52 6	1 * *	root	test -x /usr/sbin/anacron || ( cd / && run-parts --report /etc/cron.monthly )
 
-30 20	* * 0	root env DISPLAY=:0 bash $HOME/TRADE/captura/start.sh
+19 21	* * 0	root env DISPLAY=:0 bash $HOME/TRADE/captura/start.sh
 30 21	* * 0	root env DISPLAY=:0 bash $HOME/TRADE/captura/start.sh
 30 9	* * 1	root env DISPLAY=:0 bash $HOME/TRADE/captura/start.sh
 30 11   * * 1	root env DISPLAY=:0 bash $HOME/TRADE/captura/start.sh
