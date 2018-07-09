@@ -11,6 +11,7 @@ echo "LOG DE $d" > log.txt
 captura(){
 	grep -v "^#" $s > $l/sites 
 	while read site link; do 				#Abre o laço de execução dos screenshots.
+		d=$(date +%d-%m-%Y-%X)
 		m "$site | Capturando do par de $link"		
 		wget -q $link -O "$site.html"
 		m "$site | Extraindo informações do par"
