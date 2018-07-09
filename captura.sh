@@ -19,9 +19,9 @@ captura(){
 		variacao=`cat "$site.html" | grep "pc\" dir=\"ltr\"" | sed "s/<\/span>.*// ; s/.*\"ltr\">//"`
 		porcentagem=`cat "$site.html" | grep "pcp parentheses\" dir=\"ltr\"" | sed "s/<\/span>.*// ; s/.*ltr\">//"`
 		m "$site | Gravando par no arquivo"
-		e "$site	$valor	$variacao	$porcentagem	$d	$link" >> $l/dados.txt
+		e "$site	$valor	$variacao	$porcentagem	$d" >> $l/dados.txt
 		e "" >> $l/dados.txt
-		e "$site;	$valor;	$variacao;	$porcentagem;	$d;	$link;" >> $HOME/dd.csv
+		e "$site;	$valor;	$variacao;	$porcentagem;	$d;" >> $HOME/dd.csv
 		m "$site | Extraindo histórico do par no arquivo"
 		paste <(grep "data-real-valu" $site.html | sed "s/<\/td>.*// ; s/.*\">//" | sed "s/ var.*//" | xargs -n 5) <(grep "\<td\> class=\"bold" $site.html | sed 's/<\/td>.*/ '$site'/ ; s/.*\">/ /') >> $HOME/hist.csv
 		m "$site | Colocando em ordem e removendo duplicados do par no arquivo"
