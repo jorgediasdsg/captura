@@ -25,8 +25,8 @@ captura(){
 		m "$site | Extraindo histórico do par no arquivo"
 		paste <(grep "data-real-valu" $site.html | sed "s/<\/td>.*// ; s/.*\">//" | sed "s/ var.*//" | xargs -n 5) <(grep "\<td\> class=\"bold" $site.html | sed 's/<\/td>.*/ '$site'/ ; s/.*\">/ /') >> $HOME/hist.csv
 		m "$site | Colocando em ordem e removendo duplicados do par no arquivo"
-		sort $HOME/hist.csv | uniq > $HOME/historico.csv 
-		sort $HOME/dd.csv | uniq > $HOME/dados.csv 
+		sort $HOME/hist.csv | uniq > $HOME/historico.txt
+		sort $HOME/dd.csv | uniq > $HOME/dados.txt
 		m "$site | Capturando par $site e gerando PDF =)"
 		wkhtmltopdf $link $l/$site.pdf		#CAPTURA DO SITE DIRETO PARA O PDF, desculpa python, php.
 		m "$site | Par $site encerrado"
