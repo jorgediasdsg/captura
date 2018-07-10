@@ -1,26 +1,52 @@
-05 14   * * 6   $PWD env DISPLAY=:0 bash $HOME/start.sh
-30 21   * * 0   $PWD env DISPLAY=:0 bash $HOME/start.sh
-30 9    * * 1   $PWD env DISPLAY=:0 bash $HOME/start.sh
-30 11   * * 1   $PWD env DISPLAY=:0 bash $HOME/start.sh
-30 13   * * 1   $PWD env DISPLAY=:0 bash $HOME/start.sh
-30 15   * * 1   $PWD env DISPLAY=:0 bash $HOME/start.sh
-30 21   * * 1   $PWD env DISPLAY=:0 bash $HOME/start.sh
-30 9    * * 2   $PWD env DISPLAY=:0 bash $HOME/start.sh
-30 11   * * 2   $PWD env DISPLAY=:0 bash $HOME/start.sh
-30 13   * * 2   $PWD env DISPLAY=:0 bash $HOME/start.sh
-30 15   * * 2   $PWD env DISPLAY=:0 bash $HOME/start.sh
-30 21   * * 2   $PWD env DISPLAY=:0 bash $HOME/start.sh
-30 9    * * 3   $PWD env DISPLAY=:0 bash $HOME/start.sh
-30 11   * * 3   $PWD env DISPLAY=:0 bash $HOME/start.sh
-30 13   * * 3   $PWD env DISPLAY=:0 bash $HOME/start.sh
-30 15   * * 3   $PWD env DISPLAY=:0 bash $HOME/start.sh
-30 21   * * 3   $PWD env DISPLAY=:0 bash $HOME/start.sh
-30 9    * * 4   $PWD env DISPLAY=:0 bash $HOME/start.sh
-30 11   * * 4   $PWD env DISPLAY=:0 bash $HOME/start.sh
-30 13   * * 4   $PWD env DISPLAY=:0 bash $HOME/start.sh
-30 15   * * 4   $PWD env DISPLAY=:0 bash $HOME/start.sh
-30 21   * * 4   $PWD env DISPLAY=:0 bash $HOME/start.sh
-30 9    * * 5   $PWD env DISPLAY=:0 bash $HOME/start.sh
-30 11   * * 5   $PWD env DISPLAY=:0 bash $HOME/start.sh
-30 13   * * 5   $PWD env DISPLAY=:0 bash $HOME/start.sh
-30 15   * * 5   $PWD env DISPLAY=:0 bash $HOME/start.sh
+38 00   * * 2   /bin/bash $HOME/start.sh
+39 00   * * 2   /bin/bash $HOME/TRADE/captura/captura.sh
+29 21   * * 0   /bin/bash $HOME/start.sh
+30 21   * * 0   /bin/bash $HOME/TRADE/captura/captura.sh
+29 9	* * 1   /bin/bash $HOME/start.sh
+30 9    * * 1   /bin/bash $HOME/TRADE/captura/captura.sh
+29 11   * * 1   /bin/bash $HOME/start.sh
+30 11   * * 1   /bin/bash $HOME/TRADE/captura/captura.sh
+29 13   * * 1   /bin/bash $HOME/start.sh
+30 13   * * 1   /bin/bash $HOME/TRADE/captura/captura.sh
+29 15   * * 1   /bin/bash $HOME/start.sh
+30 15   * * 1   /bin/bash $HOME/TRADE/captura/captura.sh
+29 21   * * 1   /bin/bash $HOME/start.sh
+30 21   * * 1   /bin/bash $HOME/TRADE/captura/captura.sh
+29 9	* * 2   /bin/bash $HOME/start.sh
+30 9    * * 2   /bin/bash $HOME/TRADE/captura/captura.sh
+29 11   * * 2   /bin/bash $HOME/start.sh
+30 11   * * 2   /bin/bash $HOME/TRADE/captura/captura.sh
+29 13   * * 2   /bin/bash $HOME/start.sh
+30 13   * * 2   /bin/bash $HOME/TRADE/captura/captura.sh
+29 15   * * 2   /bin/bash $HOME/start.sh
+30 15   * * 2   /bin/bash $HOME/TRADE/captura/captura.sh
+29 21   * * 2   /bin/bash $HOME/start.sh
+30 21   * * 2   /bin/bash $HOME/TRADE/captura/captura.sh
+29 9	* * 3   /bin/bash $HOME/start.sh
+30 9    * * 3   /bin/bash $HOME/TRADE/captura/captura.sh
+29 11   * * 3   /bin/bash $HOME/start.sh
+30 11   * * 3   /bin/bash $HOME/TRADE/captura/captura.sh
+29 13   * * 3   /bin/bash $HOME/start.sh
+30 13   * * 3   /bin/bash $HOME/TRADE/captura/captura.sh
+29 15   * * 3   /bin/bash $HOME/start.sh
+30 15   * * 3   /bin/bash $HOME/TRADE/captura/captura.sh
+29 21   * * 3   /bin/bash $HOME/start.sh
+30 21   * * 3   /bin/bash $HOME/TRADE/captura/captura.sh
+29 9	* * 4   /bin/bash $HOME/start.sh
+30 9    * * 4   /bin/bash $HOME/TRADE/captura/captura.sh
+29 11   * * 4   /bin/bash $HOME/start.sh
+30 11   * * 4   /bin/bash $HOME/TRADE/captura/captura.sh
+29 13   * * 4   /bin/bash $HOME/start.sh
+30 13   * * 4   /bin/bash $HOME/TRADE/captura/captura.sh
+29 15   * * 4   /bin/bash $HOME/start.sh
+30 15   * * 4   /bin/bash $HOME/TRADE/captura/captura.sh
+29 21   * * 4   /bin/bash $HOME/start.sh
+30 21   * * 4   /bin/bash $HOME/TRADE/captura/captura.sh
+29 9	* * 5   /bin/bash $HOME/start.sh
+30 9    * * 5   /bin/bash $HOME/TRADE/captura/captura.sh
+29 11   * * 5   /bin/bash $HOME/start.sh
+30 11   * * 5   /bin/bash $HOME/TRADE/captura/captura.sh
+29 13   * * 5   /bin/bash $HOME/start.sh
+30 13   * * 5   /bin/bash $HOME/TRADE/captura/captura.sh
+29 15   * * 5   /bin/bash $HOME/start.sh
+30 15   * * 5   /bin/bash $HOME/TRADE/captura/captura.sh
