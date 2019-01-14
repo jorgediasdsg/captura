@@ -65,7 +65,7 @@ envia_email(){
 		m "$z | Enviando e-mail"
 		#mutt -s "$n - SEU RELATORIO TRADE DE $d" $z < c -a *.pdf log.txt $HOME/dados.txt $HOME/historico.txt; done < y
 		mutt -s "$n - SEU RELATORIO TRADE DE $d" $z < c -a log.txt $HOME/dados.txt $HOME/historico.txt; done < y
-		wget -q "https://api.telegram.org/bot654898957:AAFLCIG3P4t_DTg_GrlyqsVKnWKCvbrlFCA/sendMessage?chat_id=-157374761&text='Seus dados de $d já estão disponíveis'" -O "$site.html";
+		wget -q "https://api.telegram.org/bot654898957:AAFLCIG3P4t_DTg_GrlyqsVKnWKCvbrlFCA/sendMessage?chat_id=-157374761&text='Seus dados de $d já estão disponíveis https://goo.gl/oCKEAu'" -O "$site.html";
 }
 remove_temporarios(){ rm -rf c y *.pdf log.txt *.html sites dados.txt dados; m "SESSAO ENCERRADA, PODE VOLTAR A TOMAR CAFÉ";}
 captura
