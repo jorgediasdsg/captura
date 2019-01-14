@@ -10,7 +10,7 @@
 #Versão 1.5 12/01/2019 - Captura Valores e pdf de lista de sites e grava em planilha online.
 #Versão 1.7 13/12/2019 - Aviso no Grupo Telegram.
 #
-#cd $HOME/TRADE/captura
+cd $HOME/TRADE/captura
 e(){ echo $1; } 							#Substitue echo por e
 m(){ da=$(date +%d/%m/%Y\ %X); echo $da \| $1; echo $da \| $1 >> log.txt; }
 d=$(date +%d/%m/%Y\ %X) 					#Captura a data do sistema para nomear os arquivos.
