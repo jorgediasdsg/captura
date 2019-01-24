@@ -63,7 +63,7 @@ cria_email(){ 							#Modelo de e-mail que será enviado
 	cat dados.txt >> c
 	e "" >> c
 	e "Acesse em:" >> c
-	e "https://goo.gl/oCKEAu" >> c
+	e "https://goo.gl/Kohpyc" >> c
 	e "MrRobotTrade" >> c
 	e "-----------------------------" >> c
 }
@@ -73,7 +73,7 @@ envia_email(){
 		m "$z | Enviando e-mail"
 		#mutt -s "$n - SEU RELATORIO TRADE DE $diaatual" $z < c -a *.pdf log.txt $HOME/dados.txt $HOME/historico.txt; done < y
 		mutt -s "$n - SEU RELATORIO TRADE DE $diaatual" $z < c -a log.txt $HOME/dados.txt $HOME/historico.txt; done < y
-		wget -q "https://api.telegram.org/bot654898957:AAFLCIG3P4t_DTg_GrlyqsVKnWKCvbrlFCA/sendMessage?chat_id=-157374761&text=Seus dados de $diaatual já estão disponíveis - https://goo.gl/oCKEAu" -O "$site.html";
+		wget -q "https://api.telegram.org/bot654898957:AAFLCIG3P4t_DTg_GrlyqsVKnWKCvbrlFCA/sendMessage?chat_id=-157374761&text=Sua estatística até $diaatual está quentinha, confira aqui https://goo.gl/Kohpyc" -O "$site.html";
 }
 remove_temporarios(){ rm -rf c y *.pdf log.txt *.html sites dados.txt dados; m "SESSAO ENCERRADA, PODE VOLTAR A TOMAR CAFÉ";}
 captura
