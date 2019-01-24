@@ -39,7 +39,7 @@ captura(){
 		m "$site | Extraindo histórico do par no arquivo"
 		paste <(grep "data-real-valu" $site.html | sed "s/<\/td>.*// ; s/.*\">//" | sed "s/ var.*//" | xargs -n 5) <(grep "\<td\> class=\"bold" $site.html | sed 's/<\/td>.*/ '$site'/ ; s/.*\">/ /') >> $HOME/hist.csv
 		m "$site | Extraindo porcetagem do fechamento"
-		porcentagem_fechamento=$(grep "\<td\> class=\"bold" $site.html | head -2 | sed 's/<\/td>.*// ; s/.*\">//')
+		porcentagem_fechamento=$(grep "\<td\> class=\"bold" $site.html | head -2 | tail -1 | sed 's/<\/td>.*// ; s/.*\">//')
 		data_fechamento=$(grep "data-real-valu" $site.html | head -2 | sed "s/<\/td>.*// ; s/.*\">//" | sed "s/ var.*//" | xargs -n 5 | sed "s/\./\// ; s/\./\//")
 		m "$site | Enviando dados para planilha online $site $data_fechamento $porcentagem_fechamento"
 		wget -q "https://docs.google.com/forms/d/e/1FAIpQLScpBhnEEmURRQuC0hzPvgr8Katbbjo9scq-v7ZbY1egf87e_A/formResponse?ifq&entry.1481241936=$site&entry.338287161=$diaatual&entry.1056328059=$valor&entry.196043540=$variacao&entry.1268065653=$porcentagem&entry.1463811894=$h&entry.80433284=$porcentagem_fechamento&entry.493625541=$data_fechamento" -O "$site1.html"
