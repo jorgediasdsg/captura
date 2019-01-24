@@ -10,6 +10,7 @@
 #Versão 1.5 12/01/2019 - Captura Valores e pdf de lista de sites e grava em planilha online.
 #Versão 1.6 22/01/2019 - Colocado data atual.
 #Versão 1.7 23/01/2019 - Adicionado alguns gráficos;
+#Versão 2   24/01/2018 - Feito migração para gráficos da planilha base
 #
 cd $HOME/TRADE/captura
 e(){ echo $1; } 							#Substitue echo por e
@@ -64,7 +65,7 @@ cria_email(){ 							#Modelo de e-mail que será enviado
 	e "" >> c
 	e "Acesse em:" >> c
 	e "https://goo.gl/Kohpyc" >> c
-	e "MrRobotTrade" >> c
+	e "Sr' Robotrade, prazer." >> c
 	e "-----------------------------" >> c
 }
 envia_email(){
