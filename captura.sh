@@ -1,4 +1,4 @@
-#!/bin/bash -exu
+#!/bin/bash
 #
 #AUTOR JORGE DIAS jorgediasdsg@gmail.com https://github.com/jorgedsdsg/captura
 #
@@ -11,6 +11,7 @@
 #Versão 1.6 22/01/2019 - Colocado data atual.
 #Versão 1.7 23/01/2019 - Adicionado alguns gráficos;
 #Versão 2   24/01/2018 - Feito migração para gráficos da planilha base
+#Versão 2.1 27/01/2018 - Sistema redundância (Origem)
 #
 cd $HOME/TRADE/captura
 e(){ echo $1; } 							#Substitue echo por e
@@ -22,32 +23,33 @@ l=`pwd`										#Localiza a pasta atual do sistema.
 h=$(date +"%H")
 diaatual=$(date +%d/%m/%Y)
 diaseguinte=$(date -d "+1 days")
+origem=$HOSTNAME
 echo "LOG DE $diaatual" > log.txt
 captura(){
 	grep -v "^#" $s > sites
 	while read site link; do 				#Abre o laço de execução dos screenshots.
 		d=$(date +%d/%m/%Y\ %X)
-		m "$site | Capturando do par de $link"		
+		m "$origem | $site | Capturando do par de $link"		
 		wget -q $link -O "$site.html"
-		m "$site | Extraindo informações do par"
+		m "$origem | $site | Extraindo informações do par"
 		valor=`cat "$site.html" | grep "last_last" | sed "s/<\/span>.*// ; s/.*>//"`
 		variacao=`cat "$site.html" | grep "pc\" dir=\"ltr\"" | sed "s/<\/span>.*// ; s/.*\"ltr\">//"`
 		porcentagem=`cat "$site.html" | grep "pcp parentheses\" dir=\"ltr\"" | sed "s/<\/span>.*// ; s/.*ltr\">//"`
-		m "$site | Gravando par no arquivo"
+		m "$origem | $site | Gravando par no arquivo"
 		e "$site	$diaatual	$valor 	$variacao	$porcentagem" | sed "s/___/ /; s/%//" >> dados.txt
 		e "" >> dados.txt
 		e "$site;	$diaatual;	$valor;	$variacao;	$porcentagem;" | sed "s/___/ /; s/%//" >> $HOME/dd.csv
-		m "$site | Extraindo histórico do par no arquivo"
+		m "$origem | $site | Extraindo histórico do par no arquivo"
 		paste <(grep "data-real-valu" $site.html | sed "s/<\/td>.*// ; s/.*\">//" | sed "s/ var.*//" | xargs -n 5) <(grep "\<td\> class=\"bold" $site.html | sed 's/<\/td>.*/ '$site'/ ; s/.*\">/ /') >> $HOME/hist.csv
-		m "$site | Extraindo porcetagem do fechamento"
+		m "$origem | $site | Extraindo porcetagem do fechamento"
 		porcentagem_fechamento=$(grep "\<td\> class=\"bold" $site.html | head -2 | tail -1 | sed 's/<\/td>.*// ; s/.*\">//')
 		data_fechamento=$(grep "data-real-valu" $site.html | head -1 | tail -1 | sed "s/<\/td>.*// ; s/.*\">//" | sed "s/ var.*//" | xargs -n 5 | sed "s/\./\// ; s/\./\//")
-		m "$site | Enviando dados para planilha online $site $data_fechamento $porcentagem_fechamento"
-		wget -q "https://docs.google.com/forms/d/e/1FAIpQLScpBhnEEmURRQuC0hzPvgr8Katbbjo9scq-v7ZbY1egf87e_A/formResponse?ifq&entry.1481241936=$site&entry.338287161=$diaatual&entry.1056328059=$valor&entry.196043540=$variacao&entry.1268065653=$porcentagem&entry.1463811894=$h&entry.80433284=$porcentagem_fechamento&entry.493625541=$data_fechamento" -O "$site1.html"
+		m "$origem | $site | Enviando dados para planilha online $site $data_fechamento $porcentagem_fechamento"
+		wget -q "https://docs.google.com/forms/d/e/1FAIpQLScpBhnEEmURRQuC0hzPvgr8Katbbjo9scq-v7ZbY1egf87e_A/formResponse?ifq&entry.1481241936=$site&entry.338287161=$diaatual&entry.1056328059=$valor&entry.196043540=$variacao&entry.1268065653=$porcentagem&entry.1463811894=$h&entry.80433284=$porcentagem_fechamento&entry.493625541=$data_fechamento&entry.1887060639=$origem" -O "$site1.html"
 		#wget -q "https://docs.google.com/forms/d/e/1FAIpQLScpBhnEEmURRQuC0hzPvgr8Katbbjo9scq-v7ZbY1egf87e_A/formResponse?ifq&entry.80433284=$porcentagem&entry.493625541=$diaatual&entry.1056328059=$valor&entry.1268065653=$porcentagem&entry.1463811894=$h" -O "$site1.html"
 		#m "$site | Capturando par $site e gerando PDF =)"
 		#xvfb-run wkhtmltopdf $link $site.pdf		#CAPTURA DO SITE DIRETO PARA O PDF, desculpa python, php.
-		m "$site | Par $site encerrado"
+		m "$origem | $site | Par $site encerrado"
 	done < sites ;						# Chama o arquivo sites.txt para o laço.
 		m "Terminando | Colocando em ordem e removendo duplicados do par no arquivo histórico e dados."
 		sort $HOME/hist.csv | uniq > $HOME/historico.txt
