@@ -77,7 +77,6 @@ envia_email(){
 		m "$z | Enviando e-mail"
 		#mutt -s "$n - SEU RELATORIO TRADE DE $diaatual" $z < c -a *.pdf log.txt $HOME/dados.txt $HOME/historico.txt; done < y
 		mutt -s "$n - SEU RELATORIO TRADE DE $diaatual" $z < c -a log.txt $HOME/dados.txt $HOME/historico.txt; done < y
-		wget -q "https://api.telegram.org/bot654898957:AAFLCIG3P4t_DTg_GrlyqsVKnWKCvbrlFCA/sendMessage?chat_id=-157374761&text=Dados disponíveis de $diaatual $h. Origem: $origem. Acesse https://goo.gl/Kohpyc" -O "$site.html";
 		wget -q "$(cat $HOME/telegram.cfg)Dados disponíveis de $diaatual $h. Origem: $origem. Acesse https://goo.gl/Kohpyc" -O TELEGRA.html;
 }
 remove_temporarios(){ rm -rf c y *.pdf log.txt *.html sites dados.txt dados; m "SESSAO ENCERRADA, PODE VOLTAR A TOMAR CAFÉ";}
