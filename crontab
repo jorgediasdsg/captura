@@ -1,52 +1,30 @@
-38 00   * * 2   /bin/bash $HOME/start.sh
-39 00   * * 2   /bin/bash $HOME/TRADE/captura/captura.sh
-29 21   * * 0   /bin/bash $HOME/start.sh
-30 21   * * 0   /bin/bash $HOME/TRADE/captura/captura.sh
-29 9	* * 1   /bin/bash $HOME/start.sh
-30 9    * * 1   /bin/bash $HOME/TRADE/captura/captura.sh
-29 11   * * 1   /bin/bash $HOME/start.sh
-30 11   * * 1   /bin/bash $HOME/TRADE/captura/captura.sh
-29 13   * * 1   /bin/bash $HOME/start.sh
-30 13   * * 1   /bin/bash $HOME/TRADE/captura/captura.sh
-29 15   * * 1   /bin/bash $HOME/start.sh
-30 15   * * 1   /bin/bash $HOME/TRADE/captura/captura.sh
-29 21   * * 1   /bin/bash $HOME/start.sh
-30 21   * * 1   /bin/bash $HOME/TRADE/captura/captura.sh
-29 9	* * 2   /bin/bash $HOME/start.sh
-30 9    * * 2   /bin/bash $HOME/TRADE/captura/captura.sh
-29 11   * * 2   /bin/bash $HOME/start.sh
-30 11   * * 2   /bin/bash $HOME/TRADE/captura/captura.sh
-29 13   * * 2   /bin/bash $HOME/start.sh
-30 13   * * 2   /bin/bash $HOME/TRADE/captura/captura.sh
-29 15   * * 2   /bin/bash $HOME/start.sh
-30 15   * * 2   /bin/bash $HOME/TRADE/captura/captura.sh
-29 21   * * 2   /bin/bash $HOME/start.sh
-30 21   * * 2   /bin/bash $HOME/TRADE/captura/captura.sh
-29 9	* * 3   /bin/bash $HOME/start.sh
-30 9    * * 3   /bin/bash $HOME/TRADE/captura/captura.sh
-29 11   * * 3   /bin/bash $HOME/start.sh
-30 11   * * 3   /bin/bash $HOME/TRADE/captura/captura.sh
-29 13   * * 3   /bin/bash $HOME/start.sh
-30 13   * * 3   /bin/bash $HOME/TRADE/captura/captura.sh
-29 15   * * 3   /bin/bash $HOME/start.sh
-30 15   * * 3   /bin/bash $HOME/TRADE/captura/captura.sh
-29 21   * * 3   /bin/bash $HOME/start.sh
-30 21   * * 3   /bin/bash $HOME/TRADE/captura/captura.sh
-29 9	* * 4   /bin/bash $HOME/start.sh
-30 9    * * 4   /bin/bash $HOME/TRADE/captura/captura.sh
-29 11   * * 4   /bin/bash $HOME/start.sh
-30 11   * * 4   /bin/bash $HOME/TRADE/captura/captura.sh
-29 13   * * 4   /bin/bash $HOME/start.sh
-30 13   * * 4   /bin/bash $HOME/TRADE/captura/captura.sh
-29 15   * * 4   /bin/bash $HOME/start.sh
-30 15   * * 4   /bin/bash $HOME/TRADE/captura/captura.sh
-29 21   * * 4   /bin/bash $HOME/start.sh
-30 21   * * 4   /bin/bash $HOME/TRADE/captura/captura.sh
-29 9	* * 5   /bin/bash $HOME/start.sh
-30 9    * * 5   /bin/bash $HOME/TRADE/captura/captura.sh
-29 11   * * 5   /bin/bash $HOME/start.sh
-30 11   * * 5   /bin/bash $HOME/TRADE/captura/captura.sh
-29 13   * * 5   /bin/bash $HOME/start.sh
-30 13   * * 5   /bin/bash $HOME/TRADE/captura/captura.sh
-29 15   * * 5   /bin/bash $HOME/start.sh
-30 15   * * 5   /bin/bash $HOME/TRADE/captura/captura.sh
+40 21   * * 0   cd $HOME/TRADE/captura && git pull && /bin/bash $HOME/TRADE/captura/captura.sh
+40 7    * * 1   cd $HOME/TRADE/captura && git pull && /bin/bash $HOME/TRADE/captura/captura.sh
+40 9    * * 1   cd $HOME/TRADE/captura && git pull && /bin/bash $HOME/TRADE/captura/captura.sh
+40 11   * * 1   cd $HOME/TRADE/captura && git pull && /bin/bash $HOME/TRADE/captura/captura.sh
+40 13   * * 1   cd $HOME/TRADE/captura && git pull && /bin/bash $HOME/TRADE/captura/captura.sh
+40 15   * * 1   cd $HOME/TRADE/captura && git pull && /bin/bash $HOME/TRADE/captura/captura.sh
+40 21   * * 1   cd $HOME/TRADE/captura && git pull && /bin/bash $HOME/TRADE/captura/captura.sh
+40 7    * * 2   cd $HOME/TRADE/captura && git pull && /bin/bash $HOME/TRADE/captura/captura.sh
+40 9    * * 2   cd $HOME/TRADE/captura && git pull && /bin/bash $HOME/TRADE/captura/captura.sh
+40 11   * * 2   cd $HOME/TRADE/captura && git pull && /bin/bash $HOME/TRADE/captura/captura.sh
+40 13   * * 2   cd $HOME/TRADE/captura && git pull && /bin/bash $HOME/TRADE/captura/captura.sh
+40 15   * * 2   cd $HOME/TRADE/captura && git pull && /bin/bash $HOME/TRADE/captura/captura.sh
+40 21   * * 2   cd $HOME/TRADE/captura && git pull && /bin/bash $HOME/TRADE/captura/captura.sh
+40 7    * * 3   cd $HOME/TRADE/captura && git pull && /bin/bash $HOME/TRADE/captura/captura.sh
+40 9    * * 3   cd $HOME/TRADE/captura && git pull && /bin/bash $HOME/TRADE/captura/captura.sh
+40 11   * * 3   cd $HOME/TRADE/captura && git pull && /bin/bash $HOME/TRADE/captura/captura.sh
+40 13   * * 3   cd $HOME/TRADE/captura && git pull && /bin/bash $HOME/TRADE/captura/captura.sh
+40 15   * * 3   cd $HOME/TRADE/captura && git pull && /bin/bash $HOME/TRADE/captura/captura.sh
+40 21   * * 3   cd $HOME/TRADE/captura && git pull && /bin/bash $HOME/TRADE/captura/captura.sh
+40 7    * * 4   cd $HOME/TRADE/captura && git pull && /bin/bash $HOME/TRADE/captura/captura.sh
+40 9    * * 4   cd $HOME/TRADE/captura && git pull && /bin/bash $HOME/TRADE/captura/captura.sh
+40 11   * * 4   cd $HOME/TRADE/captura && git pull && /bin/bash $HOME/TRADE/captura/captura.sh
+40 13   * * 4   cd $HOME/TRADE/captura && git pull && /bin/bash $HOME/TRADE/captura/captura.sh
+40 15   * * 4   cd $HOME/TRADE/captura && git pull && /bin/bash $HOME/TRADE/captura/captura.sh
+40 21   * * 4   cd $HOME/TRADE/captura && git pull && /bin/bash $HOME/TRADE/captura/captura.sh
+40 7    * * 5   cd $HOME/TRADE/captura && git pull && /bin/bash $HOME/TRADE/captura/captura.sh
+40 9    * * 5   cd $HOME/TRADE/captura && git pull && /bin/bash $HOME/TRADE/captura/captura.sh
+40 11   * * 5   cd $HOME/TRADE/captura && git pull && /bin/bash $HOME/TRADE/captura/captura.sh
+40 13   * * 5   cd $HOME/TRADE/captura && git pull && /bin/bash $HOME/TRADE/captura/captura.sh
+40 15   * * 5   cd $HOME/TRADE/captura && git pull && /bin/bash $HOME/TRADE/captura/captura.sh
