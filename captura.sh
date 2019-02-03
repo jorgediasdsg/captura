@@ -58,7 +58,7 @@ captura(){
 
 }
 cria_email(){ 							#Modelo de e-mail que será enviado
-	wget -q "$(cat $HOME/telegram.cfg)Dados disponíveis de $diaatual $h. Origem: $origem. Acesse https://goo.gl/Kohpyc" -O TELEGRA.html;
+	wget -q "$(cat $HOME/telegram.cfg)Dados disponíveis de $diaatual $h horas. Origem: $origem. Acesse https://goo.gl/Kohpyc" -O TELEGRA.html;
 	m "Criando e-mail"
 	e "-----------------------------" > c
 	e "RELATORIO DE SITES ACESSADOS" >> c
