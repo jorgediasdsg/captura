@@ -10,8 +10,9 @@
 #Versão 1.5 12/01/2019 - Captura Valores e pdf de lista de sites e grava em planilha online.
 #Versão 1.6 22/01/2019 - Colocado data atual.
 #Versão 1.7 23/01/2019 - Adicionado alguns gráficos;
-#Versão 2   24/01/2018 - Feito migração para gráficos da planilha base
-#Versão 2.1 27/01/2018 - Sistema redundância (Origem)
+#Versão 2   24/01/2019 - Feito migração para gráficos da planilha base
+#Versão 2.1 27/01/2019 - Sistema redundância (Origem)
+#Versão 2.2 03/02/2019 - Instalado e Testado 2º Rasp Redundante.
 #
 cd $HOME/TRADE/captura
 e(){ echo $1; } 							#Substitue echo por e
@@ -76,7 +77,7 @@ envia_email(){
 		m "$z | Enviando e-mail"
 		#mutt -s "$n - SEU RELATORIO TRADE DE $diaatual" $z < c -a *.pdf log.txt $HOME/dados.txt $HOME/historico.txt; done < y
 		mutt -s "$n - SEU RELATORIO TRADE DE $diaatual" $z < c -a log.txt $HOME/dados.txt $HOME/historico.txt; done < y
-		wget -q "https://api.telegram.org/bot654898957:AAFLCIG3P4t_DTg_GrlyqsVKnWKCvbrlFCA/sendMessage?chat_id=-157374761&text=Sua estatística até $diaatual está quentinha, confira aqui https://goo.gl/Kohpyc" -O "$site.html";
+		wget -q "https://api.telegram.org/bot654898957:AAFLCIG3P4t_DTg_GrlyqsVKnWKCvbrlFCA/sendMessage?chat_id=-157374761&text=Dados disponíveis de $diaatual das $hH. Origem: $origem. Acesse https://goo.gl/Kohpyc" -O "$site.html";
 }
 remove_temporarios(){ rm -rf c y *.pdf log.txt *.html sites dados.txt dados; m "SESSAO ENCERRADA, PODE VOLTAR A TOMAR CAFÉ";}
 captura
