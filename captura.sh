@@ -48,7 +48,7 @@ captura(){
 		data_fechamento=$(grep "data-real-valu" $site.html | head -1 | tail -1 | sed "s/<\/td>.*// ; s/.*\">//" | sed "s/ var.*//" | xargs -n 5 | sed "s/\./\// ; s/\./\//")
 		m "$origem | $site | Enviando dados para planilha online $site $data_fechamento $porcentagem_fechamento"
 		#wget -q "https://docs.google.com/forms/d/e/1FAIpQLScpBhnEEmURRQuC0hzPvgr8Katbbjo9scq-v7ZbY1egf87e_A/formResponse?ifq&entry.1481241936=$site&entry.338287161=$diaatual&entry.1056328059=$valor&entry.196043540=$variacao&entry.1268065653=$porcentagem&entry.1463811894=$h&entry.80433284=$porcentagem_fechamento&entry.493625541=$data_fechamento&entry.1887060639=$origem" -O "$site1.html"
-		wget -q "$(cat $HOME/telegram.cfg)&entry.1481241936=$site&entry.338287161=$diaatual&entry.1056328059=$valor&entry.196043540=$variacao&entry.1268065653=$porcentagem&entry.1463811894=$h&entry.80433284=$porcentagem_fechamento&entry.493625541=$data_fechamento&entry.1887060639=$origem" -O "$site1.html"
+		wget -q "$(cat $HOME/google.cfg)&entry.1481241936=$site&entry.338287161=$diaatual&entry.1056328059=$valor&entry.196043540=$variacao&entry.1268065653=$porcentagem&entry.1463811894=$h&entry.80433284=$porcentagem_fechamento&entry.493625541=$data_fechamento&entry.1887060639=$origem" -O "$site1.html"
 		#m "$site | Capturando par $site e gerando PDF =)"
 		#xvfb-run wkhtmltopdf $link $site.pdf		#CAPTURA DO SITE DIRETO PARA O PDF, desculpa python, php.
 		m "$origem | $site | Par $site encerrado"
