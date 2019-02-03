@@ -59,6 +59,7 @@ captura(){
 
 }
 cria_email(){ 							#Modelo de e-mail que será enviado
+	wget -q "$(cat $HOME/telegram.cfg)Dados disponíveis de $diaatual $h. Origem: $origem. Acesse https://goo.gl/Kohpyc" -O TELEGRA.html;
 	m "Criando e-mail"
 	e "-----------------------------" > c
 	e "RELATORIO DE SITES ACESSADOS" >> c
@@ -76,9 +77,7 @@ envia_email(){
 	grep -v "^#" $m > y
 	while read z n WHATS; do 
 		m "$z | Enviando e-mail"
-		#mutt -s "$n - SEU RELATORIO TRADE DE $diaatual" $z < c -a *.pdf log.txt $HOME/dados.txt $HOME/historico.txt; done < y
 		mutt -s "$n - SEU RELATORIO TRADE DE $diaatual" $z < c -a log.txt $HOME/dados.txt $HOME/historico.txt; done < y
-		wget -q "$(cat $HOME/telegram.cfg)Dados disponíveis de $diaatual $h. Origem: $origem. Acesse https://goo.gl/Kohpyc" -O TELEGRA.html;
 }
 remove_temporarios(){ rm -rf c y *.pdf log.txt *.html sites dados.txt dados; m "SESSAO ENCERRADA, PODE VOLTAR A TOMAR CAFÉ";}
 captura
