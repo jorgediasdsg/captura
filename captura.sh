@@ -13,6 +13,7 @@
 #Versão 2   24/01/2019 - Feito migração para gráficos da planilha base
 #Versão 2.1 27/01/2019 - Sistema redundância (Origem)
 #Versão 2.2 03/02/2019 - Instalado e Testado 2º Rasp Redundante.
+#Versão 2.3 03/02/2019 - Removida as chaves do Telegram e Google do Git.
 #
 cd $HOME/TRADE/captura
 e(){ echo $1; } 							#Substitue echo por e
