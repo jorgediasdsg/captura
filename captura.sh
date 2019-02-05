@@ -15,6 +15,8 @@
 #Versão 2.2 03/02/2019 - Instalado e Testado 2º Rasp Redundante.
 #Versão 2.3 03/02/2019 - Removida as chaves do Telegram e Google do Git.
 #Versão 2.4 03/02/2019 - Código refatorado.
+#Versão 2.5 04/02/2019 - Refatorado telas de exibição nas planilhas de destino.
+#Versão 2.6 05/02/2019 - Implementado destino redundânte(Planilha2).
 #
 cd $HOME/TRADE/captura 						#Local de Execução
 lista_sites=sites.txt  								#Chama o arquivos com sites.
